@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>teknofest_simulator</name>
+  <version>1.0.0</version>
+  <description>This package contains simulation environment and launch instructions.</description>
+  <author email="senceryazici@gmail.com">Sencer Yazici</author>
+  <maintainer email="senceryazici@gmail.com">Sencer Yazici</maintainer>
+  <license>MIT</license>
+  <build_export_depend>uuv_sensor_ros_plugins</build_export_depend>
+  <exec_depend>uuv_sensor_ros_plugins</exec_depend>
+  <build_depend>uuv_descriptions</build_depend>
+  <build_export_depend>uuv_descriptions</build_export_depend>
+  <exec_depend>uuv_descriptions</exec_depend>
+  <build_depend>uuv_gazebo_ros_plugins</build_depend>
+  <build_export_depend>uuv_gazebo_ros_plugins</build_export_depend>
+  <exec_depend>uuv_gazebo_ros_plugins</exec_depend>
+  <build_depend>uuv_assistants</build_depend>
+  <build_export_depend>uuv_assistants</build_export_depend>
+  <exec_depend>uuv_assistants</exec_depend>
+  <build_depend>uuv_gazebo</build_depend>
+  <build_export_depend>uuv_gazebo</build_export_depend>
+  <exec_depend>uuv_gazebo</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <export>
+  </export>
+</package>

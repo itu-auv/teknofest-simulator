@@ -1,0 +1,30 @@
+<launch>
+	<env name="GAZEBO_MODEL_PATH" value="$(find teknofest_simulator)/models" />
+	<arg name="gui" default="true" />
+	<arg name="paused" default="false" />
+	<arg name="set_timeout" default="false" />
+	<arg name="timeout" default="0.0" />
+	<!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+	<!-- <include file="$(find teknofest_simulator)/launch/remaps.launch"/> -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find teknofest_simulator)/world/pool.world" />
+		<arg name="paused" value="$(arg paused)" />
+		<arg name="use_sim_time" value="true" />
+		<arg name="gui" value="$(arg gui)" />
+		<arg name="headless" value="false" />
+		<arg name="debug" value="false" />
+		<arg name="verbose" value="true" />
+	</include>
+	<!-- Spawn Start Gate -->
+	<node name="start_gate" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/start_gate/start_gate.sdf -sdf
+        -x 0 -y 0 -z 0 -model start_gate" output="screen" />
+	<!-- Spawn B Mission Circles -->
+	<node name="circles_spawn" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/circles/circles.sdf -sdf
+        -x 0 -y 0 -z -1.9 -model circles" output="screen" />
+	<group if="$(arg set_timeout)">
+		<include file="$(find uuv_assistants)/launch/set_simulation_timer.launch">
+			<arg name="timeout" value="$(arg timeout)" />
+		</include>
+	</group>
+	<include file="$(find uuv_assistants)/launch/publish_world_ned_frame.launch" />
+</launch>
