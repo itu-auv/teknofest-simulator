@@ -10,6 +10,10 @@ simülasyon ortamına aktarabilecek, ve bu repository üzerinde paylaşılan yar
 İletişim, soru, öneri ve simülasyon ortamına katkılarınız için [senceryazici@gmail.com](mailto:senceryazici@gmail.com).
 
 ## Dependencies
+- [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
+  
+  `Not: Ubuntu 18.04, ROS Melodic üzerinde test edilmiştir.`
+
 - `uuv_simulator`
   ```sh
   sudo apt install ros-melodic-uuv-simulator
