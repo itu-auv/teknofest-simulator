@@ -19,6 +19,8 @@ cd ~/catkin_ws
 
 # Build the package
 catkin build -- teknofest_simulator
+# Source your shell then finish the setup
+source devel/setup.bash
 ```
 
 ## Running
