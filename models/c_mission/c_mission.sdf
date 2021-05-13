@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+	<model name="c_mission">
+		<!-- <static>true</static> -->
+		<link name="c_mission">
+			<collision name="c_missioncol">
+				<pose>
+					0 0 0 0 0 0
+				</pose>
+				<geometry>
+					<mesh>
+						<uri>
+							model://c_mission/c_mission.dae
+						</uri>
+					</mesh>
+				</geometry>
+			</collision>
+			<visual name="c_missionvis">
+				<pose>
+					0 0 0 0 0 0
+				</pose>
+				<geometry>
+					<mesh>
+						<uri>
+							model://c_mission/c_mission.dae
+						</uri>
+					</mesh>
+				</geometry>
+			</visual>
+		</link>
+	</model>
+</sdf>

@@ -13,12 +13,18 @@
 		<arg name="debug" value="false" />
 		<arg name="verbose" value="true" />
 	</include>
-	<!-- Spawn Start Gate -->
-	<node name="start_gate" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/start_gate/start_gate.sdf -sdf
-        -x 0 -y 0 -z 0 -model start_gate" output="screen" />
+	<!-- Spawn A Mission Gate -->
+	<node name="a_mission_spawn" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/a_mission/a_mission.sdf -sdf
+        -x 0 -y 2.5 -z -1.9 -model a_mission" output="screen" />
 	<!-- Spawn B Mission Circles -->
 	<node name="circles_spawn" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/circles/circles.sdf -sdf
         -x 0 -y 0 -z -1.9 -model circles" output="screen" />
+	<!-- Spawn C Mission Pole -->
+	<node name="c_mission_spawn" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/c_mission/c_mission.sdf -sdf
+        -x 0 -y -4.35 -z -1.97 -model c_mission" output="screen" />
+	<!-- Spawn C Mission Ball -->
+	<node name="c_mission_ball_spawn" pkg="gazebo_ros" type="spawn_model" args="-file $(find teknofest_simulator)/models/ball/ball.sdf -sdf
+        -x 0 -y -4.35 -z -0.9 -model ball" output="screen" />
 	<group if="$(arg set_timeout)">
 		<include file="$(find uuv_assistants)/launch/set_simulation_timer.launch">
 			<arg name="timeout" value="$(arg timeout)" />
