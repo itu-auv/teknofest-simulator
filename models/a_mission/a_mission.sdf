@@ -1,7 +1,24 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
 	<model name="a_mission">
-		<!-- <static>true</static> -->
+		<static>false</static>
+
+		<inertial>
+      <mass>0.1</mass>
+      <inertia>
+        <ixx>0</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0</iyy>
+        <iyz>0</iyz>
+        <izz>0</izz>
+      </inertia>
+    </inertial>
+
+    <velocity_decay>
+      <linear>0.00001</linear>
+      <angular>0.00001</angular>
+    </velocity_decay>
 		<link name="a_mission">
 			<collision name="a_missioncol">
 				<pose>
