@@ -3,6 +3,12 @@ View this file in [English](README.en.md).
 
 `teknofest_simulator`, `uuv_simulator` üzerinde Teknofest 2021 Uluslararası Sualtı Yarışması için geliştirilmiş bir simülasyon ortamıdır.
 
+### Not
+`uuv_simulator` ile oluşturmuş olduğunuz aracı spawn etmeniz gerekmektedir. Yakında [İTÜ AUV Takımı GitHub hesabında](https://github.com/itu-auv)
+`uuv_simulator` ile sıfırdan araç oluşturma ile ilgili bir kılavuz yayınlayacağız. Bu kılavuz ile tasarladığınız aracı `uuv_simulator` ile 
+simülasyon ortamına aktarabilecek, ve bu repository üzerinde paylaşılan yarışma ortamına `spawn` ederek kullanabileceksiniz, takipte kalın.
+İletişim, soru, öneri ve simülasyon ortamına katkılarınız için [senceryazici@gmail.com](mailto:senceryazici@gmail.com).
+
 ## Dependencies
 - `uuv_simulator`
   ```sh
