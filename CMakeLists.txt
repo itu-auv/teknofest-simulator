@@ -13,7 +13,7 @@ find_package(catkin REQUIRED
 
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES turquoise_description
+#  LIBRARIES auv_description
 #  CATKIN_DEPENDS other_catkin_pkg
 #  DEPENDS system_lib
 )
@@ -21,10 +21,4 @@ catkin_package(
 include_directories(
 # include
 # ${catkin_INCLUDE_DIRS}
-)
-
-install(PROGRAMS
-  scripts/depth_estimator.py
-  scripts/world_to_odom_tf_publisher.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
