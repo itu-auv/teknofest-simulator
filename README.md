@@ -29,7 +29,7 @@ cd ~/catkin_ws
 
 # Paket derlenir
 catkin build -- teknofest_simulator
-# Kaynak yapılıp kurulum tamamlanır
+# Paket terminale tanıtılır ve kurulum tamamlanır
 source devel/setup.bash
 ```
 
